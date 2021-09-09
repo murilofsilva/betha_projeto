@@ -1,0 +1,1 @@
+Dar o comando "npm i" para instalar a pasta NODE MODULES

@@ -1,0 +1,32 @@
+<form #addForm="ngForm" (ngSubmit)="onAddEmployee(addForm)">
+    <h2>Registro</h2>
+    <div class="input-container nome-cont">
+        <label for="nome">Nome</label>
+        <input type="text" ngModel name="nome" id="nome" placeholder="Nome" required>
+    </div>
+    <div class="input-container cpf-cont">
+        <label for="email">CPF</label>
+        <input type="text" ngModel name="cpf" id="cpf" placeholder="CPF" required>
+    </div>
+    <div class="input-container address-cont">
+        <label for="endereco">Endereço</label>
+        <input
+        type="text" ngModel name="endereco_principal" id="endereco_principal" placeholder="Endereço Principal" required>
+        <input *ngFor="let item of addressList; index as i"
+        type="text" ngModel name="endereco{{i}}" id="endereco{{i}}" placeholder="Endereço" required>
+        <button id="addAddress"(click)="addNewAddress()" type="button">+</button>
+    </div>
+    <div class="input-container telefone-cont">
+        <label for="telefone">Telefone</label>
+        <input *ngFor="let item of telefoneList; index as i" type="tel" ngModel name="telefone{{i}}" id="telefone{{i}}" placeholder="Telefone" required>
+        <button id="addTelefone"(click)="addNewTelefone()" type="button">+</button>
+    </div>
+    <div class="input-container pass-cont">
+        <label for="email">Senha</label>
+        <input type="password" ngModel name="password" id="usrPass" placeholder="Senha" required >
+    </div>
+    <botao color="black" texto="Entrar"></botao>
+    <a class="peixe" href="" routerLink="/login">Já possuo login</a>
+</form>
+
+

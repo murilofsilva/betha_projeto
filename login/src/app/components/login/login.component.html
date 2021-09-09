@@ -1,0 +1,15 @@
+<!-- #addForm="ngForm" (ngSubmit)="onAddEmployee(addForm)" -->
+<form>
+    <h2>Login</h2>
+    <div class="input-container email-cont">
+        <label for="email">E-mail</label>
+        <input type="email" ngModel name="email" id="email" placeholder="E-mail" required>
+    </div>
+    <div class="input-container pass-cont">
+        <label for="password">Senha</label>
+        <input type="password" ngModel name="password" id="usrPass" placeholder="Senha" required >
+    </div>
+    <botao color="black" texto="Entrar"></botao>
+    <a class="peixe" href="#" routerLink="/registro">Cadastrar</a>
+</form>
+
